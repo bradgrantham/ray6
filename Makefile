@@ -1,7 +1,9 @@
+default: ray6 lines4010
+
 ray6: brads.o distrib.o grf_color.o grf_math.o grf_obj.o ray6.o
 
 lines4010: lines4010.o grf_math.o grf_obj.o
-	$(CC) $< -o $@ -l4010
+	$(CC) $(CFLAGS) $(LDFLAGS) $? -o $@ -l4014
 
 brads.o: brads.h brads.c
 
